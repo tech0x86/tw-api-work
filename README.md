@@ -4,8 +4,7 @@ Twitter APIを使って色々遊ぶ
 # はじめに
 ツイッターAPI叩いて投稿するまでの備忘録
 
-#　環境
-
+# 環境
 ## Twitter API
 Essential アカウント
 API V2
