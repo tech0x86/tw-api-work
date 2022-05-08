@@ -14,6 +14,6 @@ AS=os.environ.get('MY_TW_ACC_SEC')
 dt_now = datetime.datetime.now()
 
 client = tweepy.Client(consumer_key=CK, consumer_secret=CS, access_token=AT, access_token_secret=AS)
-
+# test
 tweetText = "がんばるぞい"+"\n"+ str(dt_now)
 client.create_tweet(text=tweetText)
