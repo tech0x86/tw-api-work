@@ -6,9 +6,9 @@ Twitter APIを使って色々遊ぶ
 
 # 環境
 ## Twitter API
-Essential アカウント
+elevated アカウント
 
-API V2
+API V1.1
 
 ## python
 python3.9
