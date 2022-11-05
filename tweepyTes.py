@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
-# ~/.profile　にアクセス情報を記載
-# 更新を反映するには次のコマンドを実施　$ source ~/.profile
+# ~/.bashrc　にアクセス情報を記載
+# 更新を反映するには次のコマンドを実施　$ source ~/.bashrc
 from tracemalloc import stop
 import tweepy
 import os
 import datetime
+imgPath = "./img/"
+# javanyan.jpg
 
 CK=os.environ.get("MY_TW_CONSUMER_KEY")
 CS=os.environ.get('MY_TW_CONSUMER_SEC')
@@ -23,11 +25,12 @@ def tweetTextMedia(twText, imgPath):
     auth.set_access_token(AT, AS)
     TW_API = tweepy.API(auth)
     media_ids = []
-    img  = TW_API.media_upload(imgPath)
+    img  = TW_API.media_upload(imgPath + "javanyan.jpg")
     media_ids.append(img.media_id)
     TW_API.update_status(status=twText, media_ids=media_ids)
     return
 
-imgPath = "./javanyan.jpg"
-#tweetTextMedia("がんばるぞい",imgPath)
-tweetTextOnly("がんばるぞい")
+if __name__ == '__main__':
+    print('start main func')
+    #tweetTextMedia("がんばるぞい",imgPath)
+    tweetTextOnly("がんばるぞい \n 2022/11/06")
