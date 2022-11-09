@@ -6,7 +6,7 @@ import tweepy
 import os
 from datetime import datetime, timedelta, timezone
 import random
-imgPath = "./img/"
+imgPath = os.path.dirname(os.path.abspath(__file__)) + "/img/"
 JST = timezone(timedelta(hours=+9), 'JST')
 
 CK=os.environ.get("MY_TW_CONSUMER_KEY")
@@ -49,6 +49,6 @@ if __name__ == '__main__':
     #print (img_files)
     #画像リストの中からランダムにimg nameを一つ選択
     img = img_files[random.randint(0, len(img_files) -1)]
-    print(img + now)
+    print(img + " " + now)
 
-    tweetTextMedia("がんばるぞい \n" + now,img)
+    #tweetTextMedia("今日も一日",img)
