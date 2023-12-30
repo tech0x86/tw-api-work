@@ -11,9 +11,10 @@ ACCESS_TOKEN_SECRET = os.environ.get('MY_TW_ACC_SEC')
 
 # API endpoint
 url = "https://api.twitter.com/2/tweets"
-
+#print(f"token: {API_KEY}   {API_SECRET_KEY}   {ACCESS_TOKEN}   {ACCESS_TOKEN_SECRET} ")
 # Create OAuth1 session
 twitter = OAuth1Session(API_KEY, client_secret=API_SECRET_KEY, resource_owner_key=ACCESS_TOKEN, resource_owner_secret=ACCESS_TOKEN_SECRET)
+#print(f"tw_oath: {twitter}")
 
 # 現在のファイルのディレクトリを取得
 current_dir = os.path.dirname(os.path.abspath(__file__))
